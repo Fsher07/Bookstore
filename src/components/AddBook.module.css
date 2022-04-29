@@ -1,0 +1,35 @@
+.title {
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: #888;
+}
+
+.placeholder {
+  padding: 2.5px;
+  display: flex;
+  width: 32%;
+  color: #888;
+}
+
+.placeholder:focus {
+  color: #000;
+}
+
+.btn {
+  letter-spacing: 0.5px;
+  font-family: 'Roboto Slab', sans-serif;
+  background-color: #4386bf;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 10px;
+  width: 15%;
+}
+
+.box {
+ padding: 2px;
+  display: flex;
+  width: 48%;
+}
