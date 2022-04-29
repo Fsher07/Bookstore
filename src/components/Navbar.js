@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { GoPerson } from 'react-icons/go';
-import { IconContext } from "react-icons"
+import { IconContext } from 'react-icons';
 
 const Navbar = () => {
   const links = [
@@ -19,15 +19,17 @@ const Navbar = () => {
   return (
     <nav className="navBar">
       <ul className="navList">
-        <h1 className='azure'>Bookstore FSH</h1>
+        <h1 className="azure">Bookstore FSH</h1>
         {links.map(({ id, path, text }) => (
           <li key={id}>
-            <NavLink to={path}
-             style={({ isActive }) =>
-             isActive
-               ? { color: '#000' }
-               : { color: '#545e6f' }
-           }>{text}</NavLink>
+            <NavLink
+              to={path}
+              style={({ isActive }) => (isActive
+                ? { color: '#000' }
+                : { color: '#545e6f' })}
+            >
+              {text}
+            </NavLink>
           </li>
         ))}
       </ul>

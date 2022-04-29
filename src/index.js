@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import BookStoreContainer from './components/BookstoreContainer';
 import { BrowserRouter } from 'react-router-dom';
+import BookStoreContainer from './components/BookstoreContainer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -9,6 +9,5 @@ root.render(
     <BrowserRouter>
       <BookStoreContainer />
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
-

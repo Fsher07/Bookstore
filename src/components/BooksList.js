@@ -1,16 +1,18 @@
-import React from "react";
-import Books from "./Books";
-const BooksList = props => {
-    return (
-        <ul>
-          {props.books.map(book => (
-           <Books 
-              key={book.id}
-              book={book}
-           />
-          ))}
-        </ul>
-    );
-}
+import React from 'react';
+import Books from './Books';
+
+const BooksList = (props) => {
+  const books = props;
+  return (
+    <ul>
+      {books.books.map((book) => (
+        <Books
+          book={book}
+          key={book.id}
+        />
+      ))}
+    </ul>
+  );
+};
 
 export default BooksList;
