@@ -43,7 +43,7 @@
   gap: 2rem;
 }
 
-.navList li{
+.navList li {
   list-style-type: none;
 }
 
@@ -60,7 +60,7 @@
   align-items: center;
   justify-content: center;
   background: #fff;
-  border: 1px solid	rgb(169,169,169);
+  border: 1px solid	rgb(169, 169, 169);
   height: 2.8em;
   width: 2.8em;
   border-radius: 50%;

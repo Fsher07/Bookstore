@@ -29,7 +29,7 @@
 }
 
 .box {
- padding: 2px;
+  padding: 2px;
   display: flex;
   width: 48%;
 }
