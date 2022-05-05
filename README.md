@@ -1,73 +1,50 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Bookstore
 
-# Project Name
-
-> Description the project.
-
+> In this project, foundations are laid for Bookstore website. React part of the app is created and set up routing using React Router.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+-React
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://github.com/Fsher07/Bookstore/)
 
+## How to Setup
 
-## Getting Started
+> You can simply clone or download [this repository](https://github.com/Fsher07/Bookstore.git), and use your favorite browser or code editor to run this program.
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+-To run the project locally, clone the project, and follow the commands below in order:
 
+```
+npm install
+```
+```
+npm start
+```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-To get a local copy up and running follow these simple example steps.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### Prerequisites
+## Author
 
-### Setup
+👤 **Furkan Salim Hıdır**
 
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [Salim](https://github.com/Fsher07)
+- Twitter: [Salim](https://twitter.com/furkansalimhdr1)
+- LinkedIn: [Salim](https://www.linkedin.com/in/furkan-salim-h%C4%B1d%C4%B1r-3441ab1b2/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Fsher07/Bookstore/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
+## Acknowlodgement
+Microverse
