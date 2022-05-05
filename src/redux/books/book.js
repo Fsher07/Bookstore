@@ -1,7 +1,9 @@
-const ADD_BOOK = 'ADD_BOOK';
-const DELETE_BOOK = 'DELETE_BOOK';
+const ADD_BOOK = 'bookstore/book/ADD_BOOK';
+const DELETE_BOOK = 'bookstore/book/DELETE_BOOK';
 
-const bookReducer = (state = [], action) => {
+const initialState = [];
+
+const bookReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [...state, action.book];
