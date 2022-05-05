@@ -49,11 +49,7 @@ class BookStoreContainer extends React.Component {
           <div className="container">
             <Routes>
               <Route path="/categories" element={<Categories />} />
-            </Routes>
-            <Routes>
               <Route path="/books" element={<BooksList books={allbooks.books} />} />
-            </Routes>
-            <Routes>
               <Route path="/books" element={<AddBook />} />
             </Routes>
           </div>
