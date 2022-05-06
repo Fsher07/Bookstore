@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom';
 import Navbar from './Navbar';
 import BooksList from './BooksList';
 import AddBook from './AddBook';
-import Categories from '../pages/Categories';
+import Categories from '../pages/Categoriespage';
 
 class BookStoreContainer extends React.Component {
   constructor(props) {
@@ -49,8 +49,6 @@ class BookStoreContainer extends React.Component {
           <div className="container">
             <Routes>
               <Route path="/categories" element={<Categories />} />
-            </Routes>
-            <Routes>
               <Route path="/books" element={<BooksList books={allbooks.books} />} />
             </Routes>
             <Routes>
