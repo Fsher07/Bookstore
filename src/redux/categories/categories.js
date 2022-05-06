@@ -1,10 +1,6 @@
 const STATUS = 'bookstore/categories/STATUS';
 
-const initialState = { books: [] };
-
-export const statusAction = () => ({
-  type: STATUS,
-});
+const initialState = [];
 
 const categoriesReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -14,5 +10,9 @@ const categoriesReducer = (state = initialState, action) => {
       return state;
   }
 };
+
+export const statusAction = () => ({
+  type: STATUS,
+});
 
 export default categoriesReducer;

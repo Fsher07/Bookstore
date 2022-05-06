@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
 import styles from './Books.module.css';
+import { deleteBookAction } from '../redux/books/book';
 
 const Books = (props) => {
+  const dispatch = useDispatch();
   const { book } = props;
   const {
-    category, title, author, progress, currentChapter,
+    id, category, title, author, progress, currentChapter,
   } = book;
   return (
     <li className="book-rows">
@@ -14,7 +17,7 @@ const Books = (props) => {
         <h3 className={styles.bookTitle}>{title}</h3>
         <p className={styles.author}>{author}</p>
         <button type="button" className={styles.btn} style={{ border: 'none', padding: '0' }}>Comment</button>
-        <button type="button" className={styles.btn}>Remove</button>
+        <button onClick={() => dispatch(deleteBookAction(id))} type="button" className={styles.btn}>Remove</button>
         <button type="button" className={styles.btn}>Edit</button>
       </div>
       <div className="book-progress">
@@ -40,6 +43,7 @@ Books.propTypes = {
     author: PropTypes.string.isRequired,
     progress: PropTypes.number.isRequired,
     currentChapter: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
   }).isRequired,
 };
 
