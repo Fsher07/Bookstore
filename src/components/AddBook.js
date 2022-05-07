@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import styles from './AddBook.module.css';
 import { addBookAction } from '../redux/books/book';
@@ -14,7 +15,10 @@ const AddBook = () => {
     const category = categoryRef.current.value;
     const author = authorRef.current.value;
     if (title && category) {
-      dispatch(addBookAction({ title, category, author }));
+      const id = uuidv4();
+      dispatch(addBookAction({
+        id, title, category, author,
+      }));
     } else return;
     document.getElementById('titleBox').value = '';
     document.getElementById('authorBox').value = '';
