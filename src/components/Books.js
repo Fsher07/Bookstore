@@ -8,7 +8,7 @@ const Books = (props) => {
   const dispatch = useDispatch();
   const { book } = props;
   const {
-    id, category, title, author, progress, currentChapter,
+    id, category, title, author,
   } = book;
   return (
     <li className="book-rows">
@@ -23,13 +23,11 @@ const Books = (props) => {
       <div className="book-progress">
         <div className="book-progress-icon" />
         <div className="book-progress-text">
-          {progress}
           %
         </div>
       </div>
       <div className="book-progress-info">
         <p className={styles.chapterText1}>CURRENT CHAPTER</p>
-        <p className={styles.chapterText2}>{currentChapter}</p>
         <button type="button" className={styles.uptadeBtn}>UPDATE PROGRESS</button>
       </div>
     </li>
@@ -41,8 +39,6 @@ Books.propTypes = {
     category: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
-    progress: PropTypes.number.isRequired,
-    currentChapter: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
   }).isRequired,
 };

@@ -1,57 +1,58 @@
-import { v4 as uuidv4 } from 'uuid';
+import { addApiBook, getApiBook, deleteApiBook } from './api';
 
 const ADD_BOOK = 'bookstore/book/ADD_BOOK';
 const DELETE_BOOK = 'bookstore/book/DELETE_BOOK';
+const GET_BOOKS = 'bookstore/book/GET_BOOKS';
 
-const initialState = [
-  {
-    id: uuidv4(),
-    category: 'Fiction',
-    title: 'Harry Potter and the Chamber of Secrets',
-    author: 'J.K. Rowling',
-    progress: 75,
-    currentChapter: 'Chapter 7',
-  },
-  {
-    id: uuidv4(),
-    category: 'Fiction',
-    title: 'The Hobbit',
-    author: 'J.R.R. Tolkien',
-    progress: 75,
-    currentChapter: 'Chapter 1',
-  },
-  {
-    id: uuidv4(),
-    category: 'Action',
-    title: 'The Hunger Games',
-    author: 'Suzanne Collins',
-    progress: 75,
-    currentChapter: 'Chapter 13',
-  },
-];
+const initialState = {
+  books: [],
+};
 
 const bookReducer = (state = initialState, action) => {
+  let books;
   switch (action.type) {
     case ADD_BOOK:
-      return [...state, action.payload];
+      return { ...state, books: state.books.concat(action.payload) };
     case DELETE_BOOK:
-      return state.filter((book) => book.id !== action.id);
+      return { ...state, books: state.books.filter((book) => book.id !== action.id) };
+    case GET_BOOKS:
+      books = Object.keys(action.payload).map((id) => ({
+        id,
+        title: action.payload[id][0].title,
+        author: action.payload[id][0].author,
+        category: action.payload[id][0].category,
+      }));
+      return { ...state, books };
     default:
       return state;
   }
 };
 
-export const addBookAction = (payload) => ({
-  type: ADD_BOOK,
-  payload: {
-    ...payload,
-    id: uuidv4(),
-  },
-});
+export const addBookAction = (book) => (dispatch) => {
+  addApiBook(book, () => {
+    dispatch({
+      type: ADD_BOOK,
+      payload: book,
+    });
+  });
+};
 
-export const deleteBookAction = (id) => ({
-  type: DELETE_BOOK,
-  id,
-});
+export const deleteBookAction = (id) => (dispatch) => {
+  deleteApiBook(id, () => {
+    dispatch({
+      type: DELETE_BOOK,
+      id,
+    });
+  });
+};
+
+export const getBooksAction = () => (dispatch) => {
+  getApiBook((results) => {
+    dispatch({
+      type: GET_BOOKS,
+      payload: results.data,
+    });
+  });
+};
 
 export default bookReducer;
