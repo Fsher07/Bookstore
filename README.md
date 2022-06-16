@@ -9,7 +9,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://github.com/Fsher07/Bookstore/)
+[Live Demo Link](https://curious-dragon-ae3d02.netlify.app/)
 
 ## How to Setup
 
